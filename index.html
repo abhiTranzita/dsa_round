@@ -380,42 +380,49 @@
       // ---------- DSA SETS – EASY TO MODERATE (FULL REPLACEMENT) ----------
 // ---------- DSA SETS – EASY TO MODERATE (SCENARIO BASED) ----------
 const SETS = [
-  [ // SET 1
-    {
-      title: "Log Deduplication",
-      desc: `A system generates a list of log IDs representing requests processed by a server.
+  // ---------- SET 1 (REPLACED QUESTIONS – EASY TO MODERATE) ----------
+[
+  {
+    title: "Find First Repeated Login",
+    desc: `A system stores user login IDs in the order they occur during the day.
 
-Some requests may appear multiple times due to retries. Your task is to return a new list containing only the first occurrence of each log ID while preserving the original order.
+Sometimes users accidentally log in twice within a short period. 
+Your task is to find the first login ID that appears more than once.
 
-Do NOT use built-in functions such as set(), dict-based deduplication, or library utilities that remove duplicates. Implement the logic manually.`,
-      examples: [
-        "Input: [101,102,101,103,102,104] → Output: [101,102,103,104]",
-        "Input: [5,5,5,5] → Output: [5]"
-      ]
-    },
-    {
-      title: "Manual Sorting of Transaction Amounts",
-      desc: `You are given a list of transaction amounts recorded during the day.
+Return the first repeated login ID.
 
-Sort the amounts in ascending order.
+Do NOT use built-in helpers such as set(), Counter, or other library utilities for detecting duplicates. Implement the logic manually.`,
+    examples: [
+      "Input: [21,45,32,21,67] → Output: 21",
+      "Input: [5,8,9,8,10] → Output: 8"
+    ]
+  },
 
-You must implement the sorting logic manually. Built-in sorting utilities such as sorted(), list.sort(), numpy.sort(), or similar are NOT allowed.`,
-      examples: [
-        "Input: [500,1200,150,800] → Output: [150,500,800,1200]",
-        "Input: [9,1,4,2] → Output: [1,2,4,9]"
-      ]
-    },
-    {
-      title: "Peak Website Traffic",
-      desc: `A monitoring system records the number of users visiting a website every minute.
+  {
+    title: "Second Highest Product Price",
+    desc: `An e-commerce platform records product prices sold during a flash sale.
 
-Return the maximum number of users recorded in the list.`,
-      examples: [
-        "Input: [12,45,32,67,34] → Output: 67",
-        "Input: [5,5,5,5] → Output: 5"
-      ]
-    }
-  ],
+Return the second highest price from the list.
+
+Do NOT use built-in sorting utilities such as sorted(), list.sort(), or similar library functions. Implement the logic manually.`,
+    examples: [
+      "Input: [120,450,300,900,700] → Output: 700",
+      "Input: [10,40,20,30] → Output: 30"
+    ]
+  },
+
+  {
+    title: "Find the Longest Username",
+    desc: `A user registration system stores a list of usernames.
+
+Your task is to return the username with the greatest length.
+If multiple usernames have the same length, return the first one encountered.`,
+    examples: [
+      'Input: ["ram","aditya","neha","rohit"] → Output: "aditya"',
+      'Input: ["aa","bbbb","ccc"] → Output: "bbbb"'
+    ]
+  }
+],
 
   [ // SET 2
     {
