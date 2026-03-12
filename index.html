@@ -377,176 +377,154 @@
       const LOCK_DURATION = 60 * 60 * 1000;
       const PASSWORDS = ["set1", "set2", "set3"];
 
-      // ---------- DSA SETS – EASY TO MODERATE (FULL REPLACEMENT) ----------
-// ---------- DSA SETS – EASY TO MODERATE (SCENARIO BASED) ----------
-// ---------- DSA SETS – EASY TO MODERATE (SCENARIO BASED – FULL REPLACEMENT) ----------
-// ---------- DSA SETS – BALANCED DIFFICULTY (4 QUESTIONS EACH) ----------
+     // ---------- DSA SETS – BALANCED DIFFICULTY (UPDATED HARDER) ----------
 const SETS = [
-        [ // SET 1
-          {
-            title: "Find Maximum Temperature",
-            difficulty: "Easy",
-            desc: `A weather station records hourly temperatures.
-      
-      Return the highest temperature recorded in the list.`,
-            examples: [
-              "Input: [30,32,29,35,31] → Output: 35",
-              "Input: [10,15,12] → Output: 15"
-            ]
-          },
-      
-          {
-            title: "Find First Duplicate Transaction ID",
-            difficulty: "Easy - Moderate",
-            desc: `A payment gateway logs transaction IDs.
-      
-      Sometimes the same transaction ID appears again due to retry requests.
-      Return the first transaction ID that appears more than once.
-      
-      Do NOT use set(), Counter, or other duplicate detection utilities.`,
-            examples: [
-              "Input: [101,203,405,203,500] → Output: 203",
-              "Input: [5,7,9,5] → Output: 5"
-            ]
-          },
-      
-          {
-            title: "Reverse Customer Queue",
-            difficulty: "Easy - Moderate",
-            desc: `A support system stores customers waiting in a queue.
-      
-      Return the queue in reverse order.
-      
-      Do NOT use reverse(), slicing tricks, or similar built-in utilities.`,
-            examples: [
-              "Input: [1,2,3,4] → Output: [4,3,2,1]",
-              "Input: [7,8,9] → Output: [9,8,7]"
-            ]
-          },
-      
-          {
-            title: "Second Highest Salary",
-            difficulty: "Moderate",
-            desc: `A company records employee salaries.
-      
-      Return the second highest salary in the list.
-      
-      Built-in sorting utilities like sorted() or list.sort() are NOT allowed.`,
-            examples: [
-              "Input: [45000,60000,55000,70000] → Output: 60000",
-              "Input: [10,20,30] → Output: 20"
-            ]
-          }
-        ],
-      
-        [ // SET 2
-          {
-            title: "Count Total Orders",
-            difficulty: "Easy",
-            desc: `An online store records order IDs in a list.
-      
-      Return the total number of orders.`,
-            examples: [
-              "Input: [101,102,103] → Output: 3",
-              "Input: [10,20] → Output: 2"
-            ]
-          },
-      
-          {
-            title: "Find Missing Ticket Number",
-            difficulty: "Easy - Moderate",
-            desc: `Ticket numbers are generated from 1 to N.
-      
-      One number is missing in the list.
-      Return the missing number.`,
-            examples: [
-              "Input: [1,2,4,5] → Output: 3",
-              "Input: [2,3,4] → Output: 1"
-            ]
-          },
-      
-          {
-            title: "Longest Username",
-            difficulty: "Easy - Moderate",
-            desc: `A platform stores usernames.
-      
-      Return the username with the greatest length.
-      If multiple names have the same length, return the first one.`,
-            examples: [
-              'Input: ["sam","alexander","tom"] → Output: "alexander"',
-              'Input: ["aa","bbbb","ccc"] → Output: "bbbb"'
-            ]
-          },
-      
-          {
-            title: "Manual Sorting of Scores",
-            difficulty: "Moderate",
-            desc: `A teacher records student scores.
-      
-      Return the scores sorted in ascending order.
-      
-      You must implement the sorting logic manually.
-      Built-in sorting utilities like sorted() or list.sort() are NOT allowed.`,
-            examples: [
-              "Input: [50,30,80,60] → Output: [30,50,60,80]",
-              "Input: [5,1,3] → Output: [1,3,5]"
-            ]
-          }
-        ],
-      
-        [ // SET 3
-          {
-            title: "Find Minimum Price",
-            difficulty: "Easy",
-            desc: `A store records product prices.
-      
-      Return the minimum price from the list.`,
-            examples: [
-              "Input: [120,90,150,80] → Output: 80",
-              "Input: [10,5,8] → Output: 5"
-            ]
-          },
-      
-          {
-            title: "Count Occurrences of a Product ID",
-            difficulty: "Easy - Moderate",
-            desc: `An inventory system logs product IDs.
-      
-      Count how many times a given product ID appears in the list.`,
-            examples: [
-              "Input: [10,20,10,30,10], target=10 → Output: 3",
-              "Input: [5,6,7], target=6 → Output: 1"
-            ]
-          },
-      
-          {
-            title: "Find All Values Below Threshold",
-            difficulty: "Easy - Moderate",
-            desc: `A warehouse records inventory quantities.
-      
-      Return all values that are below the provided threshold.`,
-            examples: [
-              "Input: inventory=[50,20,15,60], threshold=25 → Output: [20,15]",
-              "Input: inventory=[5,8,12], threshold=10 → Output: [5,8]"
-            ]
-          },
-      
-          {
-            title: "Merge Two Sales Lists",
-            difficulty: "Moderate",
-            desc: `Two stores report daily sales numbers separately.
-      
-      Combine both lists into one sorted list in ascending order.
-      
-      Sorting must be implemented manually.
-      Built-in sorting functions are not allowed.`,
-            examples: [
-              "Input: storeA=[5,2], storeB=[7,1] → Output: [1,2,5,7]",
-              "Input: storeA=[10], storeB=[3,6] → Output: [3,6,10]"
-            ]
-          }
-        ]
-      ];
+  [ // SET 1
+    {
+      title: "Find the First Non-Repeating Character",
+      difficulty: "Easy",
+      desc: `Given a string representing a log message, return the first character that does not repeat anywhere in the string.
+
+If all characters repeat, return -1.`,
+      examples: [
+        'Input: "aabbcddee" → Output: "c"',
+        'Input: "aabbcc" → Output: -1'
+      ]
+    },
+
+    {
+      title: "Longest Continuous Increasing Sales",
+      difficulty: "Easy - Moderate",
+      desc: `A store records daily sales numbers.
+
+Return the length of the longest continuous subarray where each day's sales are strictly greater than the previous day's.`,
+      examples: [
+        "Input: [10,20,30,15,18,22,25] → Output: 4",
+        "Input: [5,6,7,1,2] → Output: 3"
+      ]
+    },
+
+    {
+      title: "Find Pair with Target Sum",
+      difficulty: "Easy - Moderate",
+      desc: `Given a list of transaction values and a target value, find two numbers whose sum equals the target.
+
+Return their indices.
+
+Do NOT use hash-map helpers or library shortcuts that directly solve this problem.`,
+      examples: [
+        "Input: nums=[2,7,11,15], target=9 → Output: [0,1]",
+        "Input: nums=[3,2,4], target=6 → Output: [1,2]"
+      ]
+    },
+
+    {
+      title: "Rotate Array Right by K Steps",
+      difficulty: "Moderate",
+      desc: `Given an array and an integer k, rotate the array to the right by k steps.
+
+You must perform the rotation manually without using built-in rotation helpers.`,
+      examples: [
+        "Input: nums=[1,2,3,4,5], k=2 → Output: [4,5,1,2,3]",
+        "Input: nums=[10,20,30], k=1 → Output: [30,10,20]"
+      ]
+    }
+  ],
+
+  [ // SET 2
+    {
+      title: "Check Palindrome String",
+      difficulty: "Easy",
+      desc: `Given a string, determine whether it is a palindrome (reads the same forward and backward).`,
+      examples: [
+        'Input: "racecar" → Output: true',
+        'Input: "hello" → Output: false'
+      ]
+    },
+
+    {
+      title: "Longest Word in a Sentence",
+      difficulty: "Easy - Moderate",
+      desc: `Given a sentence, return the longest word present in it.
+
+If multiple words have the same maximum length, return the first one.`,
+      examples: [
+        'Input: "the quick brown fox jumps" → Output: "quick"',
+        'Input: "learn coding daily" → Output: "coding"'
+      ]
+    },
+
+    {
+      title: "Move All Zeros to End",
+      difficulty: "Easy - Moderate",
+      desc: `Given an array, move all zero values to the end while maintaining the order of non-zero elements.
+
+You must modify the array manually without using built-in utilities.`,
+      examples: [
+        "Input: [0,1,0,3,12] → Output: [1,3,12,0,0]",
+        "Input: [0,0,5,2] → Output: [5,2,0,0]"
+      ]
+    },
+
+    {
+      title: "Product of Array Except Self",
+      difficulty: "Moderate",
+      desc: `Given an array nums, return a new array where each element at index i is the product of all numbers except nums[i].
+
+Division is NOT allowed.`,
+      examples: [
+        "Input: [1,2,3,4] → Output: [24,12,8,6]",
+        "Input: [2,3,4] → Output: [12,8,6]"
+      ]
+    }
+  ],
+
+  [ // SET 3
+    {
+      title: "Check Anagram",
+      difficulty: "Easy",
+      desc: `Given two strings, determine whether they are anagrams of each other.`,
+      examples: [
+        'Input: "listen", "silent" → Output: true',
+        'Input: "hello", "world" → Output: false'
+      ]
+    },
+
+    {
+      title: "Maximum Sum Subarray",
+      difficulty: "Easy - Moderate",
+      desc: `Given an array of integers, return the maximum sum of any contiguous subarray.`,
+      examples: [
+        "Input: [-2,1,-3,4,-1,2,1,-5,4] → Output: 6",
+        "Input: [1,2,3] → Output: 6"
+      ]
+    },
+
+    {
+      title: "Group Consecutive Numbers",
+      difficulty: "Easy - Moderate",
+      desc: `Given a sorted list of numbers, group consecutive numbers together.
+
+Return them as subarrays.`,
+      examples: [
+        "Input: [1,2,3,6,7,9] → Output: [[1,2,3],[6,7],[9]]",
+        "Input: [4,5,8] → Output: [[4,5],[8]]"
+      ]
+    },
+
+    {
+      title: "Find the Kth Largest Element",
+      difficulty: "Moderate",
+      desc: `Given an array of numbers and an integer k, return the kth largest element.
+
+You must implement the logic manually. Built-in sorting helpers are not allowed.`,
+      examples: [
+        "Input: nums=[3,2,1,5,6,4], k=2 → Output: 5",
+        "Input: nums=[7,10,4,3,20,15], k=3 → Output: 10"
+      ]
+    }
+  ]
+];
 
       // ---------- STATE ----------
       let activeInterval = null;
