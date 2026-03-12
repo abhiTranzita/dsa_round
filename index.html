@@ -380,121 +380,168 @@
       // ---------- DSA SETS – EASY TO MODERATE (FULL REPLACEMENT) ----------
 // ---------- DSA SETS – EASY TO MODERATE (SCENARIO BASED) ----------
 // ---------- DSA SETS – EASY TO MODERATE (SCENARIO BASED – FULL REPLACEMENT) ----------
+// ---------- DSA SETS – BALANCED DIFFICULTY (4 QUESTIONS EACH) ----------
 const SETS = [
   [ // SET 1
     {
-      title: "Detect First Duplicate Device ID",
-      desc: `A monitoring system records device IDs connecting to a network.
+      title: "Find Maximum Temperature",
+      difficulty: "Easy",
+      desc: `A weather station records hourly temperatures.
 
-Sometimes the same device reconnects multiple times due to network instability. 
-Find the first device ID that appears more than once in the list.
-
-Do NOT use built-in helpers such as set(), Counter, or other duplicate-detection utilities. Implement the logic manually.`,
+Return the highest temperature recorded in the list.`,
       examples: [
-        "Input: [301,405,210,301,999] → Output: 301",
-        "Input: [10,22,35,22,40] → Output: 22"
+        "Input: [30,32,29,35,31] → Output: 35",
+        "Input: [10,15,12] → Output: 15"
       ]
     },
 
     {
-      title: "Second Highest Daily Revenue",
-      desc: `A shop records daily revenue amounts.
+      title: "Find First Duplicate Transaction ID",
+      difficulty: "Easy - Moderate",
+      desc: `A payment gateway logs transaction IDs.
 
-Return the second highest revenue value from the list.
+Sometimes the same transaction ID appears again due to retry requests.
+Return the first transaction ID that appears more than once.
 
-You are NOT allowed to use built-in sorting functions such as sorted(), list.sort(), numpy.sort(), etc. Implement the logic manually.`,
+Do NOT use set(), Counter, or other duplicate detection utilities.`,
       examples: [
-        "Input: [1200,3400,2800,1500] → Output: 2800",
-        "Input: [90,40,70,100] → Output: 90"
+        "Input: [101,203,405,203,500] → Output: 203",
+        "Input: [5,7,9,5] → Output: 5"
       ]
     },
 
     {
-      title: "Longest Product Name",
-      desc: `An inventory system stores product names.
+      title: "Reverse Customer Queue",
+      difficulty: "Easy - Moderate",
+      desc: `A support system stores customers waiting in a queue.
 
-Return the product name with the longest length. 
-If multiple names have the same maximum length, return the first one.`,
+Return the queue in reverse order.
+
+Do NOT use reverse(), slicing tricks, or similar built-in utilities.`,
       examples: [
-        'Input: ["pen","notebook","eraser","marker"] → Output: "notebook"',
-        'Input: ["tv","refrigerator","fan"] → Output: "refrigerator"'
+        "Input: [1,2,3,4] → Output: [4,3,2,1]",
+        "Input: [7,8,9] → Output: [9,8,7]"
+      ]
+    },
+
+    {
+      title: "Second Highest Salary",
+      difficulty: "Moderate",
+      desc: `A company records employee salaries.
+
+Return the second highest salary in the list.
+
+Built-in sorting utilities like sorted() or list.sort() are NOT allowed.`,
+      examples: [
+        "Input: [45000,60000,55000,70000] → Output: 60000",
+        "Input: [10,20,30] → Output: 20"
       ]
     }
   ],
 
   [ // SET 2
     {
-      title: "Find Missing Package Number",
-      desc: `A delivery system generates package numbers from 1 to N.
+      title: "Count Total Orders",
+      difficulty: "Easy",
+      desc: `An online store records order IDs in a list.
 
-Due to a tracking error, one package number is missing in the recorded list.
-
-Find the missing number.`,
+Return the total number of orders.`,
       examples: [
-        "Input: [1,2,3,5] → Output: 4",
-        "Input: [2,3,4,5] → Output: 1"
+        "Input: [101,102,103] → Output: 3",
+        "Input: [10,20] → Output: 2"
       ]
     },
 
     {
-      title: "Highest Website Traffic Minute",
-      desc: `A monitoring tool records the number of users visiting a website every minute.
+      title: "Find Missing Ticket Number",
+      difficulty: "Easy - Moderate",
+      desc: `Ticket numbers are generated from 1 to N.
 
-Return the minute index (position in the list) where the highest traffic occurred.`,
+One number is missing in the list.
+Return the missing number.`,
       examples: [
-        "Input: [30,55,42,80,65] → Output: 3",
-        "Input: [10,20,15] → Output: 1"
+        "Input: [1,2,4,5] → Output: 3",
+        "Input: [2,3,4] → Output: 1"
       ]
     },
 
     {
-      title: "Reverse Customer Queue",
-      desc: `A support desk stores customers waiting in a queue represented by numbers.
+      title: "Longest Username",
+      difficulty: "Easy - Moderate",
+      desc: `A platform stores usernames.
 
-Return a new list with the order of customers reversed.
-
-Do NOT use built-in reverse helpers such as reverse() or slicing tricks.`,
+Return the username with the greatest length.
+If multiple names have the same length, return the first one.`,
       examples: [
-        "Input: [1,2,3,4] → Output: [4,3,2,1]",
-        "Input: [7,8,9] → Output: [9,8,7]"
+        'Input: ["sam","alexander","tom"] → Output: "alexander"',
+        'Input: ["aa","bbbb","ccc"] → Output: "bbbb"'
+      ]
+    },
+
+    {
+      title: "Manual Sorting of Scores",
+      difficulty: "Moderate",
+      desc: `A teacher records student scores.
+
+Return the scores sorted in ascending order.
+
+You must implement the sorting logic manually.
+Built-in sorting utilities like sorted() or list.sort() are NOT allowed.`,
+      examples: [
+        "Input: [50,30,80,60] → Output: [30,50,60,80]",
+        "Input: [5,1,3] → Output: [1,3,5]"
       ]
     }
   ],
 
   [ // SET 3
     {
-      title: "Inventory Below Threshold",
-      desc: `A warehouse records the stock levels of products.
+      title: "Find Minimum Price",
+      difficulty: "Easy",
+      desc: `A store records product prices.
 
-Return all values that fall below a given threshold.`,
+Return the minimum price from the list.`,
       examples: [
-        "Input: inventory=[60,22,15,70,12], threshold=20 → Output: [15,12]",
+        "Input: [120,90,150,80] → Output: 80",
+        "Input: [10,5,8] → Output: 5"
+      ]
+    },
+
+    {
+      title: "Count Occurrences of a Product ID",
+      difficulty: "Easy - Moderate",
+      desc: `An inventory system logs product IDs.
+
+Count how many times a given product ID appears in the list.`,
+      examples: [
+        "Input: [10,20,10,30,10], target=10 → Output: 3",
+        "Input: [5,6,7], target=6 → Output: 1"
+      ]
+    },
+
+    {
+      title: "Find All Values Below Threshold",
+      difficulty: "Easy - Moderate",
+      desc: `A warehouse records inventory quantities.
+
+Return all values that are below the provided threshold.`,
+      examples: [
+        "Input: inventory=[50,20,15,60], threshold=25 → Output: [20,15]",
         "Input: inventory=[5,8,12], threshold=10 → Output: [5,8]"
       ]
     },
 
     {
-      title: "Longest Active Session Streak",
-      desc: `A system logs user activity where:
-1 = active session
-0 = no activity.
-
-Return the length of the longest continuous streak of active sessions.`,
-      examples: [
-        "Input: [1,1,0,1,1,1] → Output: 3",
-        "Input: [1,0,1,1] → Output: 2"
-      ]
-    },
-
-    {
       title: "Merge Two Sales Lists",
-      desc: `Two retail stores provide their daily sales amounts separately.
+      difficulty: "Moderate",
+      desc: `Two stores report daily sales numbers separately.
 
-Combine the two lists into a single sorted list in ascending order.
+Combine both lists into one sorted list in ascending order.
 
-You must implement sorting logic manually. Built-in sorting functions such as sorted() or list.sort() are NOT allowed.`,
+Sorting must be implemented manually.
+Built-in sorting functions are not allowed.`,
       examples: [
-        "Input: storeA=[5,2,9], storeB=[7,1] → Output: [1,2,5,7,9]",
+        "Input: storeA=[5,2], storeB=[7,1] → Output: [1,2,5,7]",
         "Input: storeA=[10], storeB=[3,6] → Output: [3,6,10]"
       ]
     }
