@@ -378,153 +378,161 @@
       const PASSWORDS = ["set1", "set2", "set3"];
 
      // ---------- DSA SETS – BALANCED DIFFICULTY (UPDATED HARDER) ----------
-const SETS = [
-  [ // SET 1
-    {
-      title: "Find the First Non-Repeating Character",
-      difficulty: "Easy",
-      desc: `Given a string representing a log message, return the first character that does not repeat anywhere in the string.
-
-If all characters repeat, return -1.`,
-      examples: [
-        'Input: "aabbcddee" → Output: "c"',
-        'Input: "aabbcc" → Output: -1'
+    const SETS = [
+      [ // SET 1
+        {
+          title: "First Unique Order ID",
+          difficulty: "Easy",
+          desc: `An e-commerce platform logs order IDs during the day.
+    
+    Return the first order ID that appears exactly once in the list.
+    If none exist, return -1.`,
+          examples: [
+            "Input: [10,20,10,30,20,40] → Output: 30",
+            "Input: [5,5,6,6] → Output: -1"
+          ]
+        },
+    
+        {
+          title: "Merge Two Sorted Delivery Lists",
+          difficulty: "Easy - Moderate",
+          desc: `Two warehouses send sorted delivery lists of package IDs.
+    
+    Merge the two lists into a single sorted list.
+    
+    You must implement the merging logic manually. Do NOT use built-in sorting functions.`,
+          examples: [
+            "Input: A=[1,4,7], B=[2,5,6] → Output: [1,2,4,5,6,7]",
+            "Input: A=[3,8], B=[1,9] → Output: [1,3,8,9]"
+          ]
+        },
+    
+        {
+          title: "Find Longest Stable Temperature Period",
+          difficulty: "Easy - Moderate",
+          desc: `A weather monitoring system records daily temperatures.
+    
+    Return the length of the longest subarray where the temperature never decreases.`,
+          examples: [
+            "Input: [20,21,21,23,19,20,22] → Output: 4",
+            "Input: [10,9,8] → Output: 1"
+          ]
+        },
+    
+        {
+          title: "Minimum Subarray Sum Above Target",
+          difficulty: "Moderate",
+          desc: `Given an array of positive numbers representing daily sales,
+    find the smallest length of a contiguous subarray whose sum is greater than or equal to a target value.
+    
+    Return 0 if no such subarray exists.`,
+          examples: [
+            "Input: nums=[2,3,1,2,4,3], target=7 → Output: 2",
+            "Input: nums=[1,1,1,1], target=5 → Output: 0"
+          ]
+        }
+      ],
+    
+      [ // SET 2
+        {
+          title: "Check Balanced Brackets",
+          difficulty: "Easy",
+          desc: `Given a string containing brackets (), {}, and [],
+    determine whether the brackets are balanced.`,
+          examples: [
+            "Input: '([]{})' → Output: true",
+            "Input: '([)]' → Output: false"
+          ]
+        },
+    
+        {
+          title: "Find Closest Pair to Target",
+          difficulty: "Easy - Moderate",
+          desc: `Given an array of integers and a target value,
+    find two numbers whose sum is closest to the target.
+    
+    Return the pair.`,
+          examples: [
+            "Input: nums=[1,4,7,10], target=15 → Output: [4,10]",
+            "Input: nums=[2,6,9], target=8 → Output: [2,6]"
+          ]
+        },
+    
+        {
+          title: "Group Words by Length",
+          difficulty: "Easy - Moderate",
+          desc: `Given a list of words, group them based on their length.
+    
+    Return a structure where words of the same length appear together.`,
+          examples: [
+            'Input: ["cat","dog","lion","bird"] → Output: {3:["cat","dog"],4:["lion","bird"]}',
+            'Input: ["a","bb","ccc"] → Output: {1:["a"],2:["bb"],3:["ccc"]}'
+          ]
+        },
+    
+        {
+          title: "Find Peak Element",
+          difficulty: "Moderate",
+          desc: `A peak element is greater than its neighbors.
+    
+    Given an array, return the index of any peak element.
+    
+    You must solve this efficiently (better than simple scanning).`,
+          examples: [
+            "Input: [1,2,3,1] → Output: 2",
+            "Input: [1,2,1,3,5,6,4] → Output: 1 or 5"
+          ]
+        }
+      ],
+    
+      [ // SET 3
+        {
+          title: "Count Words in Sentence",
+          difficulty: "Easy",
+          desc: `Given a sentence, return the number of words present in it.`,
+          examples: [
+            'Input: "learn coding every day" → Output: 4',
+            'Input: "hello world" → Output: 2'
+          ]
+        },
+    
+        {
+          title: "Find All Duplicate Product IDs",
+          difficulty: "Easy - Moderate",
+          desc: `An inventory list contains product IDs.
+    
+    Return all IDs that appear more than once.
+    
+    Do NOT use built-in helpers such as set() or Counter.`,
+          examples: [
+            "Input: [1,2,3,2,4,5,3] → Output: [2,3]",
+            "Input: [5,6,7] → Output: []"
+          ]
+        },
+    
+        {
+          title: "Rotate Matrix 90 Degrees",
+          difficulty: "Easy - Moderate",
+          desc: `Given an NxN matrix representing an image,
+    rotate the image by 90 degrees clockwise.
+    
+    Modify the matrix in-place if possible.`,
+          examples: [
+            "Input: [[1,2],[3,4]] → Output: [[3,1],[4,2]]"
+          ]
+        },
+    
+        {
+          title: "Find Length of Longest Substring Without Repeating Characters",
+          difficulty: "Moderate",
+          desc: `Given a string, find the length of the longest substring that contains no repeating characters.`,
+          examples: [
+            'Input: "abcabcbb" → Output: 3',
+            'Input: "bbbbb" → Output: 1'
+          ]
+        }
       ]
-    },
-
-    {
-      title: "Longest Continuous Increasing Sales",
-      difficulty: "Easy - Moderate",
-      desc: `A store records daily sales numbers.
-
-Return the length of the longest continuous subarray where each day's sales are strictly greater than the previous day's.`,
-      examples: [
-        "Input: [10,20,30,15,18,22,25] → Output: 4",
-        "Input: [5,6,7,1,2] → Output: 3"
-      ]
-    },
-
-    {
-      title: "Find Pair with Target Sum",
-      difficulty: "Easy - Moderate",
-      desc: `Given a list of transaction values and a target value, find two numbers whose sum equals the target.
-
-Return their indices.
-
-Do NOT use hash-map helpers or library shortcuts that directly solve this problem.`,
-      examples: [
-        "Input: nums=[2,7,11,15], target=9 → Output: [0,1]",
-        "Input: nums=[3,2,4], target=6 → Output: [1,2]"
-      ]
-    },
-
-    {
-      title: "Rotate Array Right by K Steps",
-      difficulty: "Moderate",
-      desc: `Given an array and an integer k, rotate the array to the right by k steps.
-
-You must perform the rotation manually without using built-in rotation helpers.`,
-      examples: [
-        "Input: nums=[1,2,3,4,5], k=2 → Output: [4,5,1,2,3]",
-        "Input: nums=[10,20,30], k=1 → Output: [30,10,20]"
-      ]
-    }
-  ],
-
-  [ // SET 2
-    {
-      title: "Check Palindrome String",
-      difficulty: "Easy",
-      desc: `Given a string, determine whether it is a palindrome (reads the same forward and backward).`,
-      examples: [
-        'Input: "racecar" → Output: true',
-        'Input: "hello" → Output: false'
-      ]
-    },
-
-    {
-      title: "Longest Word in a Sentence",
-      difficulty: "Easy - Moderate",
-      desc: `Given a sentence, return the longest word present in it.
-
-If multiple words have the same maximum length, return the first one.`,
-      examples: [
-        'Input: "the quick brown fox jumps" → Output: "quick"',
-        'Input: "learn coding daily" → Output: "coding"'
-      ]
-    },
-
-    {
-      title: "Move All Zeros to End",
-      difficulty: "Easy - Moderate",
-      desc: `Given an array, move all zero values to the end while maintaining the order of non-zero elements.
-
-You must modify the array manually without using built-in utilities.`,
-      examples: [
-        "Input: [0,1,0,3,12] → Output: [1,3,12,0,0]",
-        "Input: [0,0,5,2] → Output: [5,2,0,0]"
-      ]
-    },
-
-    {
-      title: "Product of Array Except Self",
-      difficulty: "Moderate",
-      desc: `Given an array nums, return a new array where each element at index i is the product of all numbers except nums[i].
-
-Division is NOT allowed.`,
-      examples: [
-        "Input: [1,2,3,4] → Output: [24,12,8,6]",
-        "Input: [2,3,4] → Output: [12,8,6]"
-      ]
-    }
-  ],
-
-  [ // SET 3
-    {
-      title: "Check Anagram",
-      difficulty: "Easy",
-      desc: `Given two strings, determine whether they are anagrams of each other.`,
-      examples: [
-        'Input: "listen", "silent" → Output: true',
-        'Input: "hello", "world" → Output: false'
-      ]
-    },
-
-    {
-      title: "Maximum Sum Subarray",
-      difficulty: "Easy - Moderate",
-      desc: `Given an array of integers, return the maximum sum of any contiguous subarray.`,
-      examples: [
-        "Input: [-2,1,-3,4,-1,2,1,-5,4] → Output: 6",
-        "Input: [1,2,3] → Output: 6"
-      ]
-    },
-
-    {
-      title: "Group Consecutive Numbers",
-      difficulty: "Easy - Moderate",
-      desc: `Given a sorted list of numbers, group consecutive numbers together.
-
-Return them as subarrays.`,
-      examples: [
-        "Input: [1,2,3,6,7,9] → Output: [[1,2,3],[6,7],[9]]",
-        "Input: [4,5,8] → Output: [[4,5],[8]]"
-      ]
-    },
-
-    {
-      title: "Find the Kth Largest Element",
-      difficulty: "Moderate",
-      desc: `Given an array of numbers and an integer k, return the kth largest element.
-
-You must implement the logic manually. Built-in sorting helpers are not allowed.`,
-      examples: [
-        "Input: nums=[3,2,1,5,6,4], k=2 → Output: 5",
-        "Input: nums=[7,10,4,3,20,15], k=3 → Output: 10"
-      ]
-    }
-  ]
-];
+    ];
 
       // ---------- STATE ----------
       let activeInterval = null;
