@@ -380,210 +380,208 @@
      // ---------- DSA SETS – BALANCED DIFFICULTY (UPDATED HARDER) ----------
     // ---------- DSA SETS – EASY → MODERATE (4 SETS, BALANCED) ----------
 // ---------- DSA SETS – COMPLETELY NEW QUESTIONS ----------
+// ---------- DSA SETS – MODERATE → HARD ----------
 const SETS = [
 
 /* ===================== SET 1 ===================== */
 [
 {
-title: "Find Second Largest Number",
-difficulty: "Easy",
-desc: `Given an array of integers, return the second largest number.
-
-If the array contains fewer than 2 unique numbers, return -1.`,
-examples: [
-"Input: [5,1,9,3] → Output: 5",
-"Input: [7,7,7] → Output: -1"
-]
-},
-
-{
-title: "Reverse Words in a Sentence",
-difficulty: "Easy - Moderate",
-desc: `Given a string containing words separated by spaces,
-return the sentence with the order of words reversed.
-
-Do NOT use built-in reverse helpers.`,
-examples: [
-'Input: "hello world here" → Output: "here world hello"',
-'Input: "a b c" → Output: "c b a"'
-]
-},
-
-{
-title: "Find Missing Number",
-difficulty: "Easy - Moderate",
-desc: `An array contains numbers from 1 to N with one number missing.
-
-Find the missing number.`,
-examples: [
-"Input: [1,2,4,5] → Output: 3",
-"Input: [2,3,1,5] → Output: 4"
-]
-},
-
-{
-title: "Longest Increasing Streak",
+title: "Longest Substring Without Repeating Characters",
 difficulty: "Moderate",
-desc: `Given an array of integers,
-find the length of the longest contiguous strictly increasing subarray.`,
+desc: `Given a string, find the length of the longest substring
+that contains no repeating characters.
+
+The substring must be contiguous.`,
 examples: [
-"Input: [1,2,3,1,2,3,4] → Output: 4",
-"Input: [5,4,3] → Output: 1"
+'Input: "abcabcbb" → Output: 3',
+'Input: "bbbbb" → Output: 1'
+]
+},
+
+{
+title: "Top K Frequent Elements",
+difficulty: "Moderate",
+desc: `Given an integer array and a number K,
+return the K most frequent elements.
+
+Order of result does not matter.`,
+examples: [
+"Input: nums=[1,1,1,2,2,3], k=2 → Output: [1,2]",
+"Input: nums=[4,4,4,6,6,1], k=1 → Output: [4]"
+]
+},
+
+{
+title: "Subarray Sum Equals K",
+difficulty: "Moderate - Hard",
+desc: `Given an array of integers and an integer k,
+return the total number of continuous subarrays
+whose sum equals k.`,
+examples: [
+"Input: nums=[1,1,1], k=2 → Output: 2",
+"Input: nums=[1,2,3], k=3 → Output: 2"
+]
+},
+
+{
+title: "Minimum Window Substring",
+difficulty: "Hard",
+desc: `Given two strings s and t,
+return the smallest substring of s that contains
+all characters of t.
+
+If no such substring exists, return an empty string.`,
+examples: [
+'Input: s="ADOBECODEBANC", t="ABC" → Output: "BANC"',
+'Input: s="a", t="aa" → Output: ""'
 ]
 }
 ],
-
 
 /* ===================== SET 2 ===================== */
 [
 {
-title: "Count Unique Elements",
-difficulty: "Easy",
-desc: `Given an array of integers,
-return how many unique elements are present.`,
-examples: [
-"Input: [1,2,2,3,4] → Output: 4",
-"Input: [7,7,7] → Output: 1"
-]
-},
-
-{
-title: "Rotate Array Right",
-difficulty: "Easy - Moderate",
-desc: `Rotate an array to the right by K positions.
-
-Do not use built-in rotation utilities.`,
-examples: [
-"Input: nums=[1,2,3,4,5], k=2 → Output: [4,5,1,2,3]",
-"Input: nums=[10,20,30], k=1 → Output: [30,10,20]"
-]
-},
-
-{
-title: "First Non-Repeating Character",
-difficulty: "Easy - Moderate",
-desc: `Given a string, return the first character that does not repeat.
-
-Return '_' if none exists.`,
-examples: [
-'Input: "aabbcde" → Output: "c"',
-'Input: "aabb" → Output: "_"'
-]
-},
-
-{
-title: "Two Numbers With Target Sum",
+title: "Search in Rotated Sorted Array",
 difficulty: "Moderate",
-desc: `Given an array of integers and a target number,
-return the indices of two numbers whose sum equals the target.
+desc: `A sorted array was rotated at an unknown pivot.
 
-If no pair exists, return [-1,-1].`,
+Given the array and a target value,
+return the index of the target if found,
+otherwise return -1.
+
+Time complexity should be O(log n).`,
 examples: [
-"Input: nums=[2,7,11,15], target=9 → Output: [0,1]",
-"Input: nums=[3,5,9], target=7 → Output: [-1,-1]"
+"Input: nums=[4,5,6,7,0,1,2], target=0 → Output: 4",
+"Input: nums=[4,5,6,7,0,1,2], target=3 → Output: -1"
+]
+},
+
+{
+title: "Longest Consecutive Sequence",
+difficulty: "Moderate",
+desc: `Given an unsorted array of integers,
+return the length of the longest sequence
+of consecutive numbers.`,
+examples: [
+"Input: [100,4,200,1,3,2] → Output: 4",
+"Explanation: sequence [1,2,3,4]"
+]
+},
+
+{
+title: "Daily Temperatures",
+difficulty: "Moderate - Hard",
+desc: `Given a list of daily temperatures,
+return an array where each element indicates
+how many days you would have to wait
+until a warmer temperature.
+
+If no future day exists, return 0.`,
+examples: [
+"Input: [73,74,75,71,69,72,76,73] → Output: [1,1,4,2,1,1,0,0]"
+]
+},
+
+{
+title: "Median of Two Sorted Arrays",
+difficulty: "Hard",
+desc: `Given two sorted arrays,
+return the median of the combined sorted array.
+
+The overall run time complexity should be O(log (m+n)).`,
+examples: [
+"Input: nums1=[1,3], nums2=[2] → Output: 2",
+"Input: nums1=[1,2], nums2=[3,4] → Output: 2.5"
 ]
 }
 ],
-
 
 /* ===================== SET 3 ===================== */
 [
 {
-title: "Count Words in Sentence",
-difficulty: "Easy",
-desc: `Given a string containing words separated by spaces,
-return the total number of words.`,
-examples: [
-'Input: "hello world today" → Output: 3',
-'Input: "one" → Output: 1'
-]
-},
-
-{
-title: "Merge Two Sorted Arrays",
-difficulty: "Easy - Moderate",
-desc: `Given two sorted arrays,
-merge them into a single sorted array.
-
-Do NOT use sorting utilities.`,
-examples: [
-"Input: [1,3,5] and [2,4] → Output: [1,2,3,4,5]",
-"Input: [2,4] and [1,3] → Output: [1,2,3,4]"
-]
-},
-
-{
-title: "Move Negative Numbers to Left",
-difficulty: "Easy - Moderate",
-desc: `Rearrange an array so that all negative numbers
-appear before positive numbers.
-
-Relative order does not matter.`,
-examples: [
-"Input: [3,-1,4,-2] → Output: [-1,-2,3,4]",
-"Input: [1,2,3] → Output: [1,2,3]"
-]
-},
-
-{
-title: "Maximum Sum Subarray",
+title: "Container With Most Water",
 difficulty: "Moderate",
-desc: `Given an array of integers (including negatives),
-find the maximum possible sum of a contiguous subarray.`,
+desc: `Given an array representing heights of vertical lines,
+find two lines that together with the x-axis
+form a container that holds the maximum water.`,
 examples: [
-"Input: [1,-2,3,4,-1] → Output: 7",
-"Input: [-2,-3,-1] → Output: -1"
+"Input: [1,8,6,2,5,4,8,3,7] → Output: 49"
+]
+},
+
+{
+title: "Group Anagrams",
+difficulty: "Moderate",
+desc: `Given an array of strings,
+group the anagrams together.`,
+examples: [
+'Input: ["eat","tea","tan","ate","nat","bat"] → Output: [["eat","tea","ate"],["tan","nat"],["bat"]]'
+]
+},
+
+{
+title: "Find All Anagrams in a String",
+difficulty: "Moderate - Hard",
+desc: `Given strings s and p,
+return all start indices of p's anagrams in s.`,
+examples: [
+'Input: s="cbaebabacd", p="abc" → Output: [0,6]'
+]
+},
+
+{
+title: "Largest Rectangle in Histogram",
+difficulty: "Hard",
+desc: `Given heights of histogram bars,
+find the largest rectangular area possible.`,
+examples: [
+"Input: [2,1,5,6,2,3] → Output: 10"
 ]
 }
 ],
 
-
 /* ===================== SET 4 ===================== */
 [
 {
-title: "Check Palindrome String",
-difficulty: "Easy",
-desc: `Given a string, determine whether it reads the same
-forward and backward.`,
-examples: [
-'Input: "level" → Output: true',
-'Input: "hello" → Output: false'
-]
-},
-
-{
-title: "Find Duplicate Number",
-difficulty: "Easy - Moderate",
-desc: `Given an array of integers where exactly one number appears
-more than once, return that number.`,
-examples: [
-"Input: [1,3,4,2,2] → Output: 2",
-"Input: [5,1,5,3] → Output: 5"
-]
-},
-
-{
-title: "Product of Array Except Self",
+title: "Kth Largest Element in Array",
 difficulty: "Moderate",
-desc: `Return an array where each element is the product
-of all other elements except itself.
-
-Division is NOT allowed.`,
+desc: `Given an unsorted array,
+return the kth largest element in the array.`,
 examples: [
-"Input: [1,2,3,4] → Output: [24,12,8,6]",
-"Input: [2,3,4] → Output: [12,8,6]"
+"Input: nums=[3,2,1,5,6,4], k=2 → Output: 5"
 ]
 },
 
 {
-title: "Longest Unique Substring",
+title: "Binary Tree Level Order Traversal",
 difficulty: "Moderate",
-desc: `Given a string,
-find the length of the longest substring
-that contains no repeating characters.`,
+desc: `Given the root of a binary tree,
+return the level order traversal
+of its nodes' values.`,
 examples: [
-'Input: "abcabcbb" → Output: 3',
-'Input: "bbbb" → Output: 1'
+"Input: [3,9,20,null,null,15,7] → Output: [[3],[9,20],[15,7]]"
+]
+},
+
+{
+title: "Word Break Problem",
+difficulty: "Moderate - Hard",
+desc: `Given a string s and a dictionary of words,
+determine if s can be segmented into
+space-separated dictionary words.`,
+examples: [
+'s="leetcode", dict=["leet","code"] → Output: true',
+'s="applepenapple", dict=["apple","pen"] → Output: true'
+]
+},
+
+{
+title: "Longest Increasing Subsequence",
+difficulty: "Hard",
+desc: `Given an integer array,
+return the length of the longest strictly increasing subsequence.`,
+examples: [
+"Input: [10,9,2,5,3,7,101,18] → Output: 4"
 ]
 }
 ]
