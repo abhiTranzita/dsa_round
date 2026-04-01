@@ -379,207 +379,215 @@
 
      // ---------- DSA SETS – BALANCED DIFFICULTY (UPDATED HARDER) ----------
     // ---------- DSA SETS – EASY → MODERATE (4 SETS, BALANCED) ----------
+// ---------- DSA SETS – COMPLETELY NEW QUESTIONS ----------
 const SETS = [
-  [ // SET 1
-    {
-      title: "Most Frequent Page Visit",
-      difficulty: "Easy",
-      desc: `A website logs page IDs visited by users.
 
-Return the page ID that appears the most times in the list.
-If multiple pages have the same frequency, return the first one encountered.`,
-      examples: [
-        "Input: [2,3,2,5,3,2] → Output: 2",
-        "Input: [7,7,8,8] → Output: 7"
-      ]
-    },
+/* ===================== SET 1 ===================== */
+[
+{
+title: "Find Second Largest Number",
+difficulty: "Easy",
+desc: `Given an array of integers, return the second largest number.
 
-    {
-      title: "Insert Element in Sorted List",
-      difficulty: "Easy - Moderate",
-      desc: `Given a sorted list of numbers and a new value,
-insert the value at the correct position so the list remains sorted.
-
-Do NOT use built-in sorting utilities.`,
-      examples: [
-        "Input: nums=[1,3,5,7], val=4 → Output: [1,3,4,5,7]",
-        "Input: nums=[2,6,9], val=1 → Output: [1,2,6,9]"
-      ]
-    },
-
-    {
-      title: "Longest Equal Number Streak",
-      difficulty: "Easy - Moderate",
-      desc: `A sensor logs numbers continuously.
-
-Return the length of the longest sequence where the same number repeats consecutively.`,
-      examples: [
-        "Input: [4,4,4,2,2,5] → Output: 3",
-        "Input: [1,2,2,2,3] → Output: 3"
-      ]
-    },
-
-    {
-      title: "Find Subarray with Target Sum",
-      difficulty: "Moderate",
-      desc: `Given an array of positive integers and a target value,
-return the start and end indices of a contiguous subarray whose sum equals the target.
-
-Return [-1,-1] if no such subarray exists.`,
-      examples: [
-        "Input: nums=[1,3,2,5,7,2], target=10 → Output: [2,4]",
-        "Input: nums=[2,4,6], target=5 → Output: [-1,-1]"
-      ]
-    }
-  ],
-
-  [ // SET 2
-    {
-      title: "Count Even Numbers",
-      difficulty: "Easy",
-      desc: `Given a list of integers, return the number of even values present.`,
-      examples: [
-        "Input: [1,2,3,4,5] → Output: 2",
-        "Input: [2,6,8] → Output: 3"
-      ]
-    },
-
-    {
-      title: "Remove Consecutive Duplicates",
-      difficulty: "Easy - Moderate",
-      desc: `Given a list of numbers, remove consecutive duplicate values while preserving order.
-
-Do NOT use set() or similar helpers.`,
-      examples: [
-        "Input: [1,1,2,2,3,1] → Output: [1,2,3,1]",
-        "Input: [4,4,4,4] → Output: [4]"
-      ]
-    },
-
-    {
-      title: "Rearrange Positive and Negative Numbers",
-      difficulty: "Easy - Moderate",
-      desc: `Given an array of positive and negative numbers,
-rearrange them so that positive and negative numbers alternate.
-
-If one type runs out, append the remaining values at the end.`,
-      examples: [
-        "Input: [1,-2,3,-4,5] → Output: [1,-2,3,-4,5]",
-        "Input: [1,2,-3,-4] → Output: [1,-3,2,-4]"
-      ]
-    },
-
-    {
-      title: "Find Intersection of Two Arrays",
-      difficulty: "Moderate",
-      desc: `Given two arrays, return all elements that appear in both arrays.
-
-Each element in the result should appear only once.
-
-Do NOT use set() or library helpers for intersection.`,
-      examples: [
-        "Input: A=[1,2,3,4], B=[3,4,5] → Output: [3,4]",
-        "Input: A=[5,6,7], B=[8,9] → Output: []"
-      ]
-    }
-  ],
-
-  [ // SET 3
-    {
-      title: "Find Shortest Word",
-      difficulty: "Easy",
-      desc: `Given a list of words, return the word with the smallest length.`,
-      examples: [
-        'Input: ["tree","car","mountain"] → Output: "car"',
-        'Input: ["aa","b","ccc"] → Output: "b"'
-      ]
-    },
-
-    {
-      title: "Split Numbers into Even and Odd Lists",
-      difficulty: "Easy - Moderate",
-      desc: `Given an array of integers,
-separate them into two lists: one containing even numbers and the other containing odd numbers.`,
-      examples: [
-        "Input: [1,2,3,4,5] → Output: even=[2,4], odd=[1,3,5]"
-      ]
-    },
-
-    {
-      title: "Check if Array is Sorted",
-      difficulty: "Easy - Moderate",
-      desc: `Given an array of integers, determine whether it is sorted in ascending order.`,
-      examples: [
-        "Input: [1,2,3,4] → Output: true",
-        "Input: [3,1,4] → Output: false"
-      ]
-    },
-
-    {
-      title: "Minimum Difference Pair",
-      difficulty: "Moderate",
-      desc: `Given an array of integers,
-find the pair of numbers with the smallest absolute difference.`,
-      examples: [
-        "Input: [4,9,1,7] → Output: [7,9]",
-        "Input: [10,3,6,15] → Output: [3,6]"
-      ]
-    }
-  ],
-
-  [ // SET 4
-  {
-    title: "Find Average Daily Visitors",
-    difficulty: "Easy",
-    desc: `A website records the number of visitors each day.
-
-Return the average number of visitors.
-
-The result should be returned as a number.`,
-    examples: [
-      "Input: [100,200,300] → Output: 200",
-      "Input: [10,20] → Output: 15"
-    ]
-  },
-
-  {
-    title: "Find Index of First Negative Number",
-    difficulty: "Easy - Moderate",
-    desc: `A financial system records daily profit and loss values.
-
-Find the index of the first negative value in the list.
-Return -1 if no negative value exists.`,
-    examples: [
-      "Input: [5,3,2,-4,6] → Output: 3",
-      "Input: [4,2,1] → Output: -1"
-    ]
-  },
-
-  {
-    title: "Shift Zeros to the Beginning",
-    difficulty: "Easy - Moderate",
-    desc: `Given an array of integers, move all zero values to the beginning
-while maintaining the relative order of non-zero elements.
-
-Do NOT use built-in sorting helpers.`,
-    examples: [
-      "Input: [1,0,2,0,3] → Output: [0,0,1,2,3]",
-      "Input: [4,5,0] → Output: [0,4,5]"
-    ]
-  },
-
-  {
-    title: "Find Longest Subarray with Equal 0s and 1s",
-    difficulty: "Moderate",
-    desc: `Given a binary array containing only 0s and 1s,
-find the length of the longest contiguous subarray that contains
-an equal number of 0s and 1s.`,
-    examples: [
-      "Input: [0,1] → Output: 2",
-      "Input: [0,1,0] → Output: 2"
-    ]
-  }
+If the array contains fewer than 2 unique numbers, return -1.`,
+examples: [
+"Input: [5,1,9,3] → Output: 5",
+"Input: [7,7,7] → Output: -1"
 ]
+},
+
+{
+title: "Reverse Words in a Sentence",
+difficulty: "Easy - Moderate",
+desc: `Given a string containing words separated by spaces,
+return the sentence with the order of words reversed.
+
+Do NOT use built-in reverse helpers.`,
+examples: [
+'Input: "hello world here" → Output: "here world hello"',
+'Input: "a b c" → Output: "c b a"'
+]
+},
+
+{
+title: "Find Missing Number",
+difficulty: "Easy - Moderate",
+desc: `An array contains numbers from 1 to N with one number missing.
+
+Find the missing number.`,
+examples: [
+"Input: [1,2,4,5] → Output: 3",
+"Input: [2,3,1,5] → Output: 4"
+]
+},
+
+{
+title: "Longest Increasing Streak",
+difficulty: "Moderate",
+desc: `Given an array of integers,
+find the length of the longest contiguous strictly increasing subarray.`,
+examples: [
+"Input: [1,2,3,1,2,3,4] → Output: 4",
+"Input: [5,4,3] → Output: 1"
+]
+}
+],
+
+
+/* ===================== SET 2 ===================== */
+[
+{
+title: "Count Unique Elements",
+difficulty: "Easy",
+desc: `Given an array of integers,
+return how many unique elements are present.`,
+examples: [
+"Input: [1,2,2,3,4] → Output: 4",
+"Input: [7,7,7] → Output: 1"
+]
+},
+
+{
+title: "Rotate Array Right",
+difficulty: "Easy - Moderate",
+desc: `Rotate an array to the right by K positions.
+
+Do not use built-in rotation utilities.`,
+examples: [
+"Input: nums=[1,2,3,4,5], k=2 → Output: [4,5,1,2,3]",
+"Input: nums=[10,20,30], k=1 → Output: [30,10,20]"
+]
+},
+
+{
+title: "First Non-Repeating Character",
+difficulty: "Easy - Moderate",
+desc: `Given a string, return the first character that does not repeat.
+
+Return '_' if none exists.`,
+examples: [
+'Input: "aabbcde" → Output: "c"',
+'Input: "aabb" → Output: "_"'
+]
+},
+
+{
+title: "Two Numbers With Target Sum",
+difficulty: "Moderate",
+desc: `Given an array of integers and a target number,
+return the indices of two numbers whose sum equals the target.
+
+If no pair exists, return [-1,-1].`,
+examples: [
+"Input: nums=[2,7,11,15], target=9 → Output: [0,1]",
+"Input: nums=[3,5,9], target=7 → Output: [-1,-1]"
+]
+}
+],
+
+
+/* ===================== SET 3 ===================== */
+[
+{
+title: "Count Words in Sentence",
+difficulty: "Easy",
+desc: `Given a string containing words separated by spaces,
+return the total number of words.`,
+examples: [
+'Input: "hello world today" → Output: 3',
+'Input: "one" → Output: 1'
+]
+},
+
+{
+title: "Merge Two Sorted Arrays",
+difficulty: "Easy - Moderate",
+desc: `Given two sorted arrays,
+merge them into a single sorted array.
+
+Do NOT use sorting utilities.`,
+examples: [
+"Input: [1,3,5] and [2,4] → Output: [1,2,3,4,5]",
+"Input: [2,4] and [1,3] → Output: [1,2,3,4]"
+]
+},
+
+{
+title: "Move Negative Numbers to Left",
+difficulty: "Easy - Moderate",
+desc: `Rearrange an array so that all negative numbers
+appear before positive numbers.
+
+Relative order does not matter.`,
+examples: [
+"Input: [3,-1,4,-2] → Output: [-1,-2,3,4]",
+"Input: [1,2,3] → Output: [1,2,3]"
+]
+},
+
+{
+title: "Maximum Sum Subarray",
+difficulty: "Moderate",
+desc: `Given an array of integers (including negatives),
+find the maximum possible sum of a contiguous subarray.`,
+examples: [
+"Input: [1,-2,3,4,-1] → Output: 7",
+"Input: [-2,-3,-1] → Output: -1"
+]
+}
+],
+
+
+/* ===================== SET 4 ===================== */
+[
+{
+title: "Check Palindrome String",
+difficulty: "Easy",
+desc: `Given a string, determine whether it reads the same
+forward and backward.`,
+examples: [
+'Input: "level" → Output: true',
+'Input: "hello" → Output: false'
+]
+},
+
+{
+title: "Find Duplicate Number",
+difficulty: "Easy - Moderate",
+desc: `Given an array of integers where exactly one number appears
+more than once, return that number.`,
+examples: [
+"Input: [1,3,4,2,2] → Output: 2",
+"Input: [5,1,5,3] → Output: 5"
+]
+},
+
+{
+title: "Product of Array Except Self",
+difficulty: "Moderate",
+desc: `Return an array where each element is the product
+of all other elements except itself.
+
+Division is NOT allowed.`,
+examples: [
+"Input: [1,2,3,4] → Output: [24,12,8,6]",
+"Input: [2,3,4] → Output: [12,8,6]"
+]
+},
+
+{
+title: "Longest Unique Substring",
+difficulty: "Moderate",
+desc: `Given a string,
+find the length of the longest substring
+that contains no repeating characters.`,
+examples: [
+'Input: "abcabcbb" → Output: 3',
+'Input: "bbbb" → Output: 1'
+]
+}
+]
+
 ];
 
       // ---------- STATE ----------
