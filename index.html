@@ -388,164 +388,166 @@
 
       // ---------- FINAL VARIED DSA SETS (EASY → MODERATE) ----------
 
+// ---------- COMPLETELY NEW DSA SETS ----------
+
 const SETS = [
 
-  // ---------------- SET 1 (ARRAY + INTERVAL + LOGIC) ----------------
+  // ---------------- SET 1 (ARRAY + PREFIX + GREEDY) ----------------
   [
     {
-      title: "Find the Single Number",
+      title: "Find Difference Between Max and Min",
       difficulty: "Easy",
-      desc: `Every element appears twice except one. Find that single element.`,
+      desc: `Return the difference between the maximum and minimum element in the array.`,
       examples: [
-        "Input: [2,2,1] → Output: 1",
-        "Input: [4,1,2,1,2] → Output: 4"
+        "Input: [3,10,6,1] → Output: 9",
+        "Input: [7,7,7] → Output: 0"
       ]
     },
 
     {
-      title: "Merge Overlapping Intervals",
+      title: "Equilibrium Index",
       difficulty: "Easy - Moderate",
-      desc: `Given intervals, merge all overlapping ones.
-
-Do NOT use built-in sorting functions.`,
+      desc: `Find an index where the sum of elements on left equals sum on right.`,
       examples: [
-        "Input: [[1,3],[2,6],[8,10]] → Output: [[1,6],[8,10]]"
+        "Input: [1,3,5,2,2] → Output: 2"
       ]
     },
 
     {
-      title: "Find All Leaders in Array",
+      title: "Rearrange Array by Sign",
       difficulty: "Easy - Moderate",
-      desc: `An element is a leader if it is greater than all elements to its right.`,
+      desc: `Rearrange array so positive and negative numbers alternate.
+Maintain relative order where possible.`,
       examples: [
-        "Input: [16,17,4,3,5,2] → Output: [17,5,2]"
+        "Input: [3,-1,-2,4,-5,6] → Output: [3,-1,4,-2,6,-5]"
       ]
     },
 
     {
-      title: "Longest Subarray with At Most K Distinct Elements",
+      title: "Maximum Sum Circular Subarray",
       difficulty: "Moderate",
-      desc: `Return the length of the longest subarray containing at most K distinct numbers.`,
+      desc: `Return the maximum sum of a subarray in a circular array.`,
       examples: [
-        "Input: nums=[1,2,1,2,3], K=2 → Output: 4"
+        "Input: [5,-3,5] → Output: 10",
+        "Input: [-2,-3,-1] → Output: -1"
       ]
     }
   ],
 
-  // ---------------- SET 2 (STRINGS + HASHING + STACK) ----------------
+  // ---------------- SET 2 (STRINGS + HASHING + TWO POINTER) ----------------
   [
     {
-      title: "Check Valid Parentheses",
+      title: "Check Subsequence",
       difficulty: "Easy",
-      desc: `Check if brackets are valid and properly nested.`,
+      desc: `Check if string s is a subsequence of string t.`,
       examples: [
-        "Input: '()[]{}' → Output: true",
-        "Input: '(]' → Output: false"
+        'Input: s="abc", t="ahbgdc" → Output: true',
+        'Input: s="axc", t="ahbgdc" → Output: false'
       ]
     },
 
     {
-      title: "Minimum Window Substring (Simplified)",
+      title: "Reverse Words in a Sentence",
       difficulty: "Easy - Moderate",
-      desc: `Find the smallest substring containing all characters of another string (order doesn't matter).`,
+      desc: `Reverse the order of words in a sentence without using built-in reverse helpers.`,
       examples: [
-        'Input: s="ADOBECODEBANC", t="ABC" → Output: "BANC"'
+        'Input: "hello world again" → Output: "again world hello"'
       ]
     },
 
     {
-      title: "Encode String with Counts",
+      title: "Find All Unique Characters",
       difficulty: "Easy - Moderate",
-      desc: `Compress a string using counts of consecutive characters (run-length encoding).`,
+      desc: `Return characters that appear exactly once in a string.`,
       examples: [
-        'Input: "aaabbc" → Output: "a3b2c1"'
+        'Input: "aabccdbe" → Output: ["d","e"]'
       ]
     },
 
     {
-      title: "Evaluate Reverse Polish Notation",
+      title: "Longest Palindromic Substring",
       difficulty: "Moderate",
-      desc: `Evaluate an expression given in Reverse Polish Notation.`,
+      desc: `Return the longest substring that is a palindrome.`,
       examples: [
-        "Input: ['2','1','+','3','*'] → Output: 9"
+        'Input: "babad" → Output: "bab" (or "aba")'
       ]
     }
   ],
 
-  // ---------------- SET 3 (MATRIX + GREEDY + SEARCH) ----------------
+  // ---------------- SET 3 (MATRIX + SIMULATION + SEARCH) ----------------
   [
     {
-      title: "Count Islands (Simplified)",
+      title: "Diagonal Sum of Matrix",
       difficulty: "Easy",
-      desc: `Count number of groups of 1s connected horizontally or vertically in a grid.`,
+      desc: `Return the sum of primary and secondary diagonals of a square matrix.`,
       examples: [
-        "Input: [[1,1,0],[0,1,0],[1,0,1]] → Output: 3"
+        "Input: [[1,2,3],[4,5,6],[7,8,9]] → Output: 25"
       ]
     },
 
     {
-      title: "Set Matrix Zeroes",
+      title: "Transpose Matrix",
       difficulty: "Easy - Moderate",
-      desc: `If any element is 0, set its entire row and column to 0.`,
+      desc: `Return the transpose of a matrix (rows become columns).`,
       examples: [
-        "Input: [[1,1,1],[1,0,1],[1,1,1]] → Output: [[1,0,1],[0,0,0],[1,0,1]]"
+        "Input: [[1,2,3],[4,5,6]] → Output: [[1,4],[2,5],[3,6]]"
       ]
     },
 
     {
-      title: "Gas Station Circuit",
+      title: "Find Row with Maximum Ones",
       difficulty: "Easy - Moderate",
-      desc: `Find starting index to complete circular route given gas and cost arrays.`,
+      desc: `Given a binary matrix, return the index of the row with maximum number of 1s.`,
       examples: [
-        "Input: gas=[1,2,3,4], cost=[2,2,2,2] → Output: 1"
+        "Input: [[0,1,1],[1,1,1],[0,0,1]] → Output: 1"
       ]
     },
 
     {
-      title: "Search in Rotated Sorted Array",
+      title: "Search in 2D Matrix",
       difficulty: "Moderate",
-      desc: `Search target in rotated sorted array in O(log n).`,
+      desc: `Search for a target in a matrix where rows are sorted and first element of each row is greater than last of previous row.`,
       examples: [
-        "Input: nums=[4,5,6,7,0,1,2], target=0 → Output: 4"
+        "Input: matrix=[[1,3,5],[7,9,11]], target=9 → Output: true"
       ]
     }
   ],
 
-  // ---------------- SET 4 (MIXED ADVANCED PATTERNS) ----------------
+  // ---------------- SET 4 (MATH + STACK + GREEDY + DP-LITE) ----------------
   [
     {
-      title: "Find Missing Number (XOR)",
+      title: "Sum of Digits",
       difficulty: "Easy",
-      desc: `Find missing number from 0..N using constant space.`,
+      desc: `Return the sum of digits of a number.`,
       examples: [
-        "Input: [3,0,1] → Output: 2"
+        "Input: 1234 → Output: 10"
       ]
     },
 
     {
-      title: "Next Greater Element",
+      title: "Balanced String Split",
       difficulty: "Easy - Moderate",
-      desc: `For each element, find the next greater element to its right.`,
+      desc: `Split a string into maximum number of balanced substrings containing equal L and R.`,
       examples: [
-        "Input: [4,5,2,25] → Output: [5,25,25,-1]"
+        'Input: "RLRRLLRLRL" → Output: 4'
       ]
     },
 
     {
-      title: "Sort Colors (Dutch Flag)",
+      title: "Stock Buy and Sell (Single Transaction)",
       difficulty: "Easy - Moderate",
-      desc: `Sort array of 0s,1s,2s in one pass without sorting.`,
+      desc: `Find maximum profit from a single buy-sell operation.`,
       examples: [
-        "Input: [2,0,2,1,1,0] → Output: [0,0,1,1,2,2]"
+        "Input: [7,1,5,3,6,4] → Output: 5"
       ]
     },
 
     {
-      title: "Maximum Length of Repeated Subarray",
+      title: "Minimum Steps to Reach End",
       difficulty: "Moderate",
-      desc: `Find length of longest common subarray between two arrays.`,
+      desc: `Given steps you can jump from each index, find minimum jumps to reach the end.`,
       examples: [
-        "Input: A=[1,2,3,2,1], B=[3,2,1,4] → Output: 3"
+        "Input: [2,3,1,1,4] → Output: 2"
       ]
     }
   ]
