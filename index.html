@@ -408,44 +408,40 @@ const SETS = [
   // ================= SET 1 =================
   [
     {
-      title: "Find Equilibrium Point",
+      title: "Find the Second Most Frequent Element",
       difficulty: "Easy",
-      desc: `Return an index where the sum of elements on the left equals the sum on the right.
-Return -1 if no such index exists.`,
+      desc: `Return the element with the second highest frequency in the array.
+If no such element exists, return -1.`,
       examples: [
-        "Input: [1,3,5,2,2] → Output: 2",
-        "Input: [1,2,3] → Output: -1"
+        "Input: [1,1,2,2,2,3] → Output: 1",
+        "Input: [5,5,5] → Output: -1"
       ]
     },
 
     {
-      title: "Rearrange Positives and Negatives",
+      title: "Merge Consecutive Ranges",
       difficulty: "Easy - Moderate",
-      desc: `Rearrange the array so that positive and negative numbers appear alternately.
-Maintain relative order where possible.`,
+      desc: `Given a sorted list of integers, convert consecutive values into ranges.`,
       examples: [
-        "Input: [1,-2,3,-4,-1,4] → Output: [1,-2,3,-4,4,-1]"
+        "Input: [1,2,3,5,6,8] → Output: ['1-3','5-6','8']"
       ]
     },
 
     {
-      title: "Find Duplicate in Limited Range Array",
+      title: "Find Common Elements Across Three Arrays",
       difficulty: "Easy - Moderate",
-      desc: `An array contains N+1 integers where numbers range from 1 to N.
-Find the duplicate number without modifying the array.`,
+      desc: `Return elements present in all three sorted arrays.`,
       examples: [
-        "Input: [1,3,4,2,2] → Output: 2",
-        "Input: [3,1,3,4,2] → Output: 3"
+        "Input: [1,2,3,4], [2,3,5], [2,3,6] → Output: [2,3]"
       ]
     },
 
     {
-      title: "Longest Consecutive Sequence",
+      title: "Maximum Sum of Non-Adjacent Elements",
       difficulty: "Moderate",
-      desc: `Return the length of the longest sequence of consecutive integers.`,
+      desc: `Return the maximum possible sum such that no two selected elements are adjacent.`,
       examples: [
-        "Input: [100,4,200,1,3,2] → Output: 4",
-        "Input: [0,3,7,2,5,8,4,6,0,1] → Output: 9"
+        "Input: [2,7,9,3,1] → Output: 12"
       ]
     }
   ],
@@ -453,40 +449,40 @@ Find the duplicate number without modifying the array.`,
   // ================= SET 2 =================
   [
     {
-      title: "Check Rotated Sorted Array",
+      title: "Find First Missing Positive Even Number",
       difficulty: "Easy",
-      desc: `Determine whether the array was originally sorted in non-decreasing order and then rotated.`,
+      desc: `Return the smallest positive even number missing from the array.`,
       examples: [
-        "Input: [3,4,5,1,2] → Output: true",
-        "Input: [2,1,3,4] → Output: false"
+        "Input: [2,4,8] → Output: 6",
+        "Input: [4,6] → Output: 2"
       ]
     },
 
     {
-      title: "Group Shifted Strings",
+      title: "Compress Consecutive Characters",
       difficulty: "Easy - Moderate",
-      desc: `Group strings that belong to the same shifting sequence.
-Example: abc → bcd → cde.`,
+      desc: `Replace consecutive repeated characters with character + count.`,
       examples: [
-        'Input: ["abc","bcd","acef","xyz","az","ba"] → Output: grouped sequences'
+        'Input: "aaabbcccc" → Output: "a3b2c4"'
       ]
     },
 
     {
-      title: "Minimum Size Subarray Sum",
+      title: "Find Longest Common Prefix",
       difficulty: "Easy - Moderate",
-      desc: `Return the minimum length of a contiguous subarray whose sum is greater than or equal to target.`,
+      desc: `Return the longest common prefix among all strings.`,
       examples: [
-        "Input: nums=[2,3,1,2,4,3], target=7 → Output: 2"
+        'Input: ["flower","flow","flight"] → Output: "fl"'
       ]
     },
 
     {
-      title: "Find All Anagrams in String",
+      title: "Minimum Jumps to Reach End",
       difficulty: "Moderate",
-      desc: `Return all starting indices of substrings in s that are anagrams of p.`,
+      desc: `Each element indicates maximum jump length.
+Return minimum jumps required to reach the end.`,
       examples: [
-        'Input: s="cbaebabacd", p="abc" → Output: [0,6]'
+        "Input: [2,3,1,1,4] → Output: 2"
       ]
     }
   ],
@@ -494,41 +490,39 @@ Example: abc → bcd → cde.`,
   // ================= SET 3 =================
   [
     {
-      title: "Find Missing Number",
+      title: "Find Row Sum with Maximum Value",
       difficulty: "Easy",
-      desc: `Given numbers from 0 to N with one number missing, return the missing number.`,
+      desc: `Return the index of the row having maximum sum.`,
       examples: [
-        "Input: [3,0,1] → Output: 2",
-        "Input: [0,1] → Output: 2"
+        "Input: [[1,2],[5,1],[2,2]] → Output: 1"
       ]
     },
 
     {
-      title: "Sort Array by Frequency",
+      title: "Rotate Matrix 90 Degrees Clockwise",
       difficulty: "Easy - Moderate",
-      desc: `Sort elements based on frequency in decreasing order.
-If frequencies are same, smaller number comes first.
-Do NOT use built-in sorting helpers.`,
+      desc: `Rotate a square matrix by 90 degrees clockwise.`,
       examples: [
-        "Input: [4,4,1,2,2,2,3] → Output: [2,2,2,4,4,1,3]"
+        "Input: [[1,2],[3,4]] → Output: [[3,1],[4,2]]"
       ]
     },
 
     {
-      title: "Find Pair with Closest Sum",
+      title: "Find All Duplicate Values",
       difficulty: "Easy - Moderate",
-      desc: `Given a sorted array and target X, find the pair whose sum is closest to X.`,
+      desc: `Return all values appearing more than once.
+Do not use built-in duplicate-removal helpers.`,
       examples: [
-        "Input: nums=[1,3,4,7,10], X=15 → Output: [4,10]"
+        "Input: [1,2,3,2,4,1] → Output: [1,2]"
       ]
     },
 
     {
-      title: "Sliding Window Maximum",
+      title: "Shortest Path in Grid",
       difficulty: "Moderate",
-      desc: `Return maximum element from every contiguous subarray of size K.`,
+      desc: `Given a grid with blocked and open cells, return the minimum steps required to reach destination.`,
       examples: [
-        "Input: nums=[1,3,-1,-3,5,3,6,7], K=3 → Output: [3,3,5,5,6,7]"
+        "Input: grid=[[0,0,0],[1,1,0],[0,0,0]] → Output: 4"
       ]
     }
   ],
@@ -536,41 +530,39 @@ Do NOT use built-in sorting helpers.`,
   // ================= SET 4 =================
   [
     {
-      title: "Find Majority Element",
+      title: "Validate Time Format",
       difficulty: "Easy",
-      desc: `Return the element appearing more than N/2 times.
-Return -1 if no such element exists.`,
+      desc: `Check whether a string represents a valid 24-hour time in HH:MM format.`,
       examples: [
-        "Input: [2,2,1,1,2,2,2] → Output: 2",
-        "Input: [1,2,3,4] → Output: -1"
+        'Input: "23:45" → Output: true',
+        'Input: "25:10" → Output: false'
       ]
     },
 
     {
-      title: "Next Greater Element",
+      title: "Find Nearest Greater Value",
       difficulty: "Easy - Moderate",
-      desc: `For every element, find the next greater element to its right.`,
+      desc: `For every element, find the nearest greater element on either side.`,
       examples: [
-        "Input: [4,5,2,25] → Output: [5,25,25,-1]"
+        "Input: [2,5,1,7] → Output: [5,7,5,-1]"
       ]
     },
 
     {
-      title: "Search in Rotated Sorted Array",
+      title: "Merge Two Sorted Linked Lists",
       difficulty: "Easy - Moderate",
-      desc: `Search for a target value in a rotated sorted array in O(log n).`,
+      desc: `Merge two sorted linked lists into a single sorted list.`,
       examples: [
-        "Input: nums=[4,5,6,7,0,1,2], target=0 → Output: 4",
-        "Input: nums=[4,5,6,7,0,1,2], target=3 → Output: -1"
+        "Input: [1,3,5], [2,4,6] → Output: [1,2,3,4,5,6]"
       ]
     },
 
     {
-      title: "Largest Rectangle in Histogram",
+      title: "Task Scheduler",
       difficulty: "Moderate",
-      desc: `Find the area of the largest rectangle possible in the histogram.`,
+      desc: `Given tasks and a cooldown period, determine the minimum intervals required to execute all tasks.`,
       examples: [
-        "Input: [2,1,5,6,2,3] → Output: 10"
+        "Input: tasks=['A','A','A','B','B','B'], cooldown=2 → Output: 8"
       ]
     }
   ]
